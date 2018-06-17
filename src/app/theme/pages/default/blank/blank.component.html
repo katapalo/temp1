@@ -1,0 +1,229 @@
+<div class="m-content">
+<angular2-multiselect [data]="dropdownList" [(ngModel)]="selectedItems"
+	[settings]="dropdownSettings"></angular2-multiselect>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<!--begin::Portlet-->
+			<div class="m-portlet m-portlet--tab">
+				
+				<div class="m-portlet__body">
+					<!-- CONTENIDO DEL PANEL -->
+					<div class="row s-row--no-padding m-row--col-separator-xl">
+
+						<div class="col-lg-3">
+							<div class="m-portlet__body">
+								<!-- CONTENIDO DEL PANEL -->
+								<h3 class="m-portlet__head-text">
+									Marca artículo
+								</h3>
+								<select>										
+									<option *ngFor="let employee of employees" value="{{ employee.first_name }}">{{ employee.first_name }}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+							<div class="m-portlet__body">
+								<!-- CONTENIDO DEL PANEL -->
+								<h3 class="m-portlet__head-text">
+									Tipo artículo
+								</h3>
+								<select>										
+									<option *ngFor="let employee of employees" value="{{ employee.first_name }}">{{ employee.first_name }}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+							<div class="m-portlet__body">
+								<!-- CONTENIDO DEL PANEL -->
+								<h3 class="m-portlet__head-text">
+									Radio
+								</h3>
+								<select>										
+									<option *ngFor="let employee of employees" value="{{ employee.first_name }}">{{ employee.first_name }}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-lg-2">
+							<div class="m-portlet__body">
+								<!-- CONTENIDO DEL PANEL -->
+								<h3 class="m-portlet__head-text">
+									Ancho
+								</h3>
+								<select>										
+									<option *ngFor="let employee of employees" value="{{ employee.first_name }}">{{ employee.first_name }}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-lg-1">
+							<div class="m-portlet__body">
+								<!-- CONTENIDO DEL PANEL -->
+								<button (click)="boton()">Aplicar</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__body">
+					<!-- CONTENIDO DEL PANEL -->
+					<span class="m-widget1__number m--font-brand">
+						<h2>+$17,800</h2>
+					</span>
+					Cantidad Neumaticos
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__body">
+					<!-- CONTENIDO DEL PANEL -->
+					<span class="m-widget1__number m--font-danger">
+						<h2>+$800</h2>
+					</span>
+					Compra €
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__body">
+					<!-- CONTENIDO DEL PANEL -->
+					<span class="m-widget1__number m--font-success">
+						<h2>{{ n }}</h2>
+					</span>
+					cosas blablablabla
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__body">
+					<!-- CONTENIDO DEL PANEL -->
+					<span class="m-widget1__number m--font-brand">
+						<h2>+$99999</h2>
+					</span>
+					cosas blablablabla
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<br/>
+
+	<!-- main -->
+	<div class="row">
+		<div class="col-lg-6">
+			<!-- Ancho col de panel -->
+			<!--begin::Portlet-->
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<span class="m-portlet__head-icon m--hide">
+								<i class="la la-gear"></i>
+							</span>
+							<h3 class="m-portlet__head-text">
+								Top Ventas por neumático
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="chartdiv" style="height: 500px;"></div>
+				</div>
+			</div>
+		</div>
+		<!--end::Portlet-->
+		<!--begin::Portlet-->
+		<div class='col-lg-6'>
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<span class="m-portlet__head-icon m--hide">
+								<i class="la la-gear"></i>
+							</span>
+							<h3 class="m-portlet__head-text">
+								Temporalidad de compras
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="chartdiv2" style="height: 170px;"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<span class="m-portlet__head-icon m--hide">
+								<i class="la la-gear"></i>
+							</span>
+							<h3 class="m-portlet__head-text">
+								Mix marca
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="chartdiv3" style="height: 170px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<!-- Ancho col de panel -->
+			<!--begin::Portlet-->
+			<div class="m-portlet m-portlet--tab">
+				<div class="m-portlet__body">
+					<!-- CUERPO DE LA TABLA -->
+					<div class="col-lg-12">
+						<table class="table table-striped">
+							<thead>
+							  <tr>
+								<th>#</th>
+								<th>First</th>
+								<th>Last</th>
+								<th>Handle</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr *ngFor="let employee of employees">
+								<td>
+									{{ employee.id }}
+								</td>
+								<td>
+									{{ employee.first_name }}
+								</td>
+								<td>
+									{{ employee.last_name }}
+								</td>
+								<td>
+									{{ employee.email }}
+								</td>
+
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
